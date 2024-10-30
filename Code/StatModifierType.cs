@@ -1,4 +1,4 @@
-﻿namespace Meowtopia.Code.Game.Stats
+﻿namespace Code.Game.Stats
 {
     public enum StatModifierType
     {
