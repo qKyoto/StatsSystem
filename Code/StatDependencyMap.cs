@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Meowtopia.Code.Game.Stats
+namespace Code.Game.Stats
 {
     public abstract class StatDependencyMap
     {
