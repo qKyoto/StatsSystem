@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Meowtopia.Code.Game.Stats
+namespace Code.Game.Stats
 {
     public class StatsProvider : MonoBehaviour
     {
