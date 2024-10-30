@@ -6,7 +6,7 @@ using Meowtopia.Code.Constants.Data;
 using UnityEditor;
 using UnityEngine;
 
-namespace Meowtopia.Code.Game.Stats
+namespace Code.Game.Stats
 {
     [Serializable]
     public class StatDefinition
