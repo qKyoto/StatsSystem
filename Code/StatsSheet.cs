@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Meowtopia.Code.Utilities.RuntimeUtility;
 
-namespace Meowtopia.Code.Game.Stats
+namespace Code.Game.Stats
 {
     public interface IStatsSheet
     {
