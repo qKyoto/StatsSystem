@@ -5,7 +5,6 @@ namespace Code.Game.Stats
     public abstract class StatDependencyMap
     {
         protected static StatsSheet StatsSheet { get; private set; }
-        protected static readonly Formula IDENTITY = baseValue => baseValue;
         
         public delegate float Formula(float baseValue);
 
