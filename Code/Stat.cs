@@ -93,7 +93,11 @@ namespace Code.Game.Stats
 
         private float GetDerivedValue()
         {
-            return _dependencyMap == null ? _baseValue : _dependencyMap.FormulaMap[Type](_baseValue);
+            if (_dependencyMap == null)
+                return _baseValue;
+            
+            return _dependencyMap.FormulaMap.TryGetValue(Type, out StatDependencyMap.Formula formula) ? 
+                formula(_baseValue) : _baseValue;
         }
 
         private float GetFlatModifierValue()
