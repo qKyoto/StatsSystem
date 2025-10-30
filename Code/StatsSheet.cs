@@ -68,12 +68,12 @@ namespace Code.Game.Stats
             
             foreach (StatType type in _stats.Keys)
             {
-                Stat stat = _stats[type];
-                StatType[] dependencies = _config.StatDependencyMap.Dependency[type];
-
+                if (!_config.StatDependencyMap.Dependency.TryGetValue(type, out StatType[] dependencies))
+                    continue;
                 if (dependencies == null)
                     continue;
                 
+                Stat stat = _stats[type];
                 foreach (StatType dependencyStat in dependencies)
                     _stats[dependencyStat].StatUpdated += () => { stat.Validate(); };
             }
